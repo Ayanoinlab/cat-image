@@ -1,9 +1,10 @@
+"use client"; // (1) use clientを指定
+ 
 
-"use client"
 import React from "react";
-import { fetchImage } from "./fetch-image.ts";
+import { fetchImage } from "./fetch-image";
 import { useState } from "react"; // 追加
-import styles from "./page.module.css";
+import styles from "./page.module.css"; //
  
 // コンポーネントの引数を定義する
 type CatImageProps = {
@@ -20,10 +21,10 @@ type CatImageProps = {
       };
     return (
       <div className={styles.page}>
-       <button onClick={refreshImage} className={styles.button}>
+      <button onClick={refreshImage} className={styles.button}>
         他のにゃんこも見る
-       </button>
-       <div className={styles.frame}>
+      </button>
+      <div className={styles.frame}>
         {imageUrl && <img src={imageUrl} className={styles.img} />}
       </div>
     </div>

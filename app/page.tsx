@@ -1,5 +1,4 @@
 import { CatImage } from "./cat-image";
-import { connection } from "next/server"; // 追加
 import { fetchImage } from "./fetch-image"; // 追加
 import React from "react";
  
